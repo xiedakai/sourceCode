@@ -155,6 +155,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
      * @return the previous value
      */
     public final int getAndIncrement() {
+        //this:当前的AtomicInteger实例 valueOffset:偏移量
         return unsafe.getAndAddInt(this, valueOffset, 1);
     }
 
